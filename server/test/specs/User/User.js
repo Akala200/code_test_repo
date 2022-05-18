@@ -11,13 +11,7 @@ const User = require('../../actions/User/UserApiActions');
 
 
 describe('Performing CRUD Operations on User', () => {
-  const number = 5;
-  describe('POST Request: Get Request Test', () => {
-    it('getting a request', async () => {
-      const res = await User.getRequest(number);
-      res.status.should.equal(statusCode.OK);
-    });
+  describe('POST Request: Create a User', () => {
+
   });
-
-
 });

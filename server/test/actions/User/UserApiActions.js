@@ -19,8 +19,8 @@ const reqBody = require('../../testData/Payloads/CommonPayload');
 
 exports.getRequest = async function (number) {
   URL = baseActions.getBaseURL();
-  console.log(URL + baseURLMapper.CREATE);
-  const res = await baseActions.sendGETRequest(URL, baseURLMapper.CREATE);
+  console.log(URL + baseURLMapper.GET);
+  const res = await baseActions.sendGETRequest(URL, baseURLMapper.GET);
   return res;
 };
 /** This getUserList will help us in getting all the users that are present in the database

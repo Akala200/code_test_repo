@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">54.28% </span>
+                <span class="strong">25.71% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>19/35</span>
+                <span class='fraction'>9/35</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">16% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>4/25</span>
+                <span class='fraction'>0/25</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">63.63% </span>
+                <span class="strong">45.45% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>7/11</span>
+                <span class='fraction'>5/11</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">60% </span>
+                <span class="strong">30% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>18/30</span>
+                <span class='fraction'>9/30</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -171,20 +171,20 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -220,14 +220,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -271,21 +271,21 @@ const headers = require('../../testData/DefaultHeaders').myHeaders;
 /** This getBaseUrl will help you in dynamically assigning the baseurl and baseurl extension to the ENVIRONMENT and ENVEXT variable
         for more information about env var read the Readme file * */
 &nbsp;
-exports.getBaseURL = () =&gt; {
-  let baseURL = '';
-  let baseURLExt = '';
-  try {
-    baseURL = process.env.ENVIRONMENT;
-    baseURLExt = process.env.ENVEXT;
-    console.log(`BaseURL : ${baseURL}`);
+exports.getBaseURL = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+  let baseURL = <span class="cstat-no" title="statement not covered" >'';</span>
+  let baseURLExt = <span class="cstat-no" title="statement not covered" >'';</span>
+<span class="cstat-no" title="statement not covered" >  try {</span>
+<span class="cstat-no" title="statement not covered" >    baseURL = p</span>rocess.env.ENVIRONMENT;
+<span class="cstat-no" title="statement not covered" >    baseURLExt = p</span>rocess.env.ENVEXT;
+<span class="cstat-no" title="statement not covered" >    console.l</span>og(`BaseURL : ${baseURL}`);
   } catch (err) {
 <span class="cstat-no" title="statement not covered" >    throw n</span>ew Error(`BASE URL is not Defined, Please Specify the BASE URL : ${process.env.ENVIRONMENT}`);
   }
-  const BaseURLSpecifications = {
+  const BaseURLSpecifications = <span class="cstat-no" title="statement not covered" >{</span>
     BASE_URL: baseURL, // baseUrl(Ex:'https://27.158.126.894/')
     BASE_URL_EXTENSION: baseURLExt, // baseUrl_ext(Ex:'api/v1/')
   };
-  return BaseURLSpecifications.BASE_URL + BaseURLSpecifications.BASE_URL_EXTENSION;
+<span class="cstat-no" title="statement not covered" >  return B</span>aseURLSpecifications.BASE_URL + BaseURLSpecifications.BASE_URL_EXTENSION;
 };
 &nbsp;
 /** This sendPOSTRequest can be used when you dont need to pass a token while performing a POST operation * */
@@ -321,14 +321,14 @@ exports.sendPOSTRequest1 = <span class="cstat-no" title="statement not covered" 
 &nbsp;
 /** This sendGETRequest can be used when you will be passing a token while performing a GET operation * */
 &nbsp;
-exports.sendGETRequest = <span class="branch-1 cbranch-no" title="branch not covered" >async (b</span>aseUrl, apiEndPoint) =&gt; {
+exports.sendGETRequest = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >async (b</span></span>aseUrl, apiEndPoint) =&gt; {
   try {
     const <span class="cstat-no" title="statement not covered" >res = await supertest(baseUrl).get(apiEndPoint).retry(2)</span>
       .set(headers.ACCEPT_JSON)
       .set(headers.APPLICATION_JSON);
     return res;
   } catch (err) {
-    console.log('Error in sending GET Request: ', err);
+<span class="cstat-no" title="statement not covered" >    console.l</span>og('Error in sending GET Request: ', err);
   }
 };
 &nbsp;
@@ -367,7 +367,7 @@ exports.sendDELETERequest = <span class="cstat-no" title="statement not covered"
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Wed May 18 2022 06:59:50 GMT+0100 (West Africa Standard Time)
+                at Wed May 18 2022 07:24:12 GMT+0100 (West Africa Standard Time)
             </div>
         </div>
         <script src="../../../../../prettify.js"></script>

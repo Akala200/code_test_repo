@@ -1,9 +1,8 @@
 import express from 'express';
 import testRoutes from './test';
-import auth from '../middlewares/authMiddleware';
 
 const app = express();
 
-app.use('/test', auth, testRoutes);
+app.use('/test', testRoutes);
 
 export default app;
