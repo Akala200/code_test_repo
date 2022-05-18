@@ -60,12 +60,11 @@ exports.sendPOSTRequest1 = async (baseUrl, apiEndPoint, requestBody, token) => {
 
 /** This sendGETRequest can be used when you will be passing a token while performing a GET operation * */
 
-exports.sendGETRequest = async (baseUrl, apiEndPoint, token) => {
+exports.sendGETRequest = async (baseUrl, apiEndPoint) => {
   try {
     const res = await supertest(baseUrl).get(apiEndPoint).retry(2)
       .set(headers.ACCEPT_JSON)
-      .set(headers.APPLICATION_JSON)
-      .set('Authorization', `Bearer ${token}`);
+      .set(headers.APPLICATION_JSON);
     return res;
   } catch (err) {
     console.log('Error in sending GET Request: ', err);

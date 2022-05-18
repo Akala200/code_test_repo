@@ -17,19 +17,11 @@ const reqBody = require('../../testData/Payloads/CommonPayload');
         this request body can be changed as per your project api * */
 
 
-exports.createUser = async function (username, password, role) {
-  const requestBody = reqBody.userBody(username, password, role);
+exports.getRequest = async function (number) {
   URL = baseActions.getBaseURL();
-  console.log(URL + baseURLMapper.CREATE, requestBody);
-  const res = await baseActions.sendPOSTRequest(URL, baseURLMapper.CREATE, requestBody);
+  console.log(URL + baseURLMapper.CREATE);
+  const res = await baseActions.sendGETRequest(URL, baseURLMapper.CREATE);
   return res;
 };
-exports.loginUser = async function (username, password) {
-  const requestBody = reqBody.userBody(username, password);
-  URL = baseActions.getBaseURL();
-  console.log(URL + baseURLMapper.LOGIN, requestBody);
-  const res = await baseActions.sendPOSTRequest(URL, baseURLMapper.LOGIN, requestBody);
-  return res;
-};
-
-/** This getUserList will help us in getting all the users that are present in the database * */
+/** This getUserList will help us in getting all the users that are present in the database
+*/

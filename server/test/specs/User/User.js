@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable camelcase */
 /* eslint-disable no-console */
 /* eslint-disable no-underscore-dangle */
@@ -7,17 +8,14 @@ import { StatusCode as statusCode } from '../../../../StatusCode';
 
 const mocha = require('mocha');
 const User = require('../../actions/User/UserApiActions');
-const data = require('../../testData/LoginUserInfo.js').UserLoginData;
 
 
 describe('Performing CRUD Operations on User', () => {
-  const { username, password } = data.USER_DETAILS;
-
-
-  describe('POST Request: Create a User', () => {
-    it('creating a User', async () => {
-      const res = await User.createUser(username, password, role);
-      res.status.should.equal(statusCode.CREATED);
+  const number = 5;
+  describe('POST Request: Get Request Test', () => {
+    it('getting a request', async () => {
+      const res = await User.getRequest(number);
+      res.status.should.equal(statusCode.OK);
     });
   });
 
